@@ -56,9 +56,9 @@ const formatterCurrency = (coin:number): Currency =>{
   if(_.isString(coin)){
     coin = _.toNumber(coin);
   }
-  if (coin == 0) return {money: '0', suffix: 'TCESS'};
+  if (coin == 0) return {money: '0', suffix: 'SCORE'};
   let k = 1000; //设定基础货币换算比例
-  let currencyStr = ['PICO','NANO','MICRO','MILLI','TCESS','KILO','MILL','BILL']; //容量单位
+  let currencyStr = ['PICO','NANO','MICRO','MILLI','SCORE','KILO','MILL','BILL']; //容量单位
   let i = 0; //单位下标和次幂
   for(let l=0;l<8;l++){
     if(coin / Math.pow(k, l) < 1){
@@ -77,9 +77,9 @@ const formatterCurrencyStr = (coin:number): string =>{
   if(_.isString(coin)){
     coin = _.toNumber(coin);
   }
-  if (coin == 0) return "0 TCESS";
+  if (coin == 0) return "0 SCORE";
   let k = 1000; //设定基础货币换算比例
-    let currencyStr = ['PICO','NANO','MICRO','MILLI','TCESS','KILO','MILL','BILL']; //容量单位
+    let currencyStr = ['PICO','NANO','MICRO','MILLI','SCORE','KILO','MILL','BILL']; //容量单位
   let i = 0; //单位下标和次幂
   for(let l=0;l<8;l++){
     if(coin / Math.pow(k, l) < 1){
