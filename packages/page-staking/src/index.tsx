@@ -76,38 +76,45 @@ function StakingApp ({ basePath, className = '' }: Props): React.ReactElement<Pr
       isRoot: true,
       name: 'overview',
       text: t<string>('Overview'),
+      iconName:'Overview',
       icon: true
     },
     {
       name: 'actions',
       text: t<string>('Account actions'),
+      iconName:'Account actions',
       icon: true
     },
     isFunction(api.query.staking.activeEra) && hasAccounts && ownStashes && (ownStashes.length !== 0) && {
       name: 'payout',
-      text: t<string>('Payouts')
+      text: t<string>('Payouts'),
+      iconName:'Payouts'
     },
     {
       alias: 'returns',
       name: 'targets',
       text: t<string>('Targets'),
+      iconName:'Targets',
       icon: true
     },
     {
       name: 'waiting',
       text: t<string>('Waiting'),
+      iconName:'Waiting',
       icon: true
     },
     {
       count: slashes.reduce((count, [, unapplied]) => count + unapplied.length, 0),
       name: 'slashes',
       text: t<string>('Slashes'),
+      iconName:'Slashes',
       icon: true
     },
     {
       hasParams: true,
       name: 'query',
       text: t<string>('Validator stats'),
+      iconName:'Validator stats',
       icon: true
     }
   ].filter((q): q is { name: string; text: string } => !!q), [api, hasAccounts, ownStashes, slashes, t]);

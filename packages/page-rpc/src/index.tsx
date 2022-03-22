@@ -19,6 +19,7 @@ function RpcApp ({ basePath }: Props): React.ReactElement<Props> {
       isRoot: true,
       name: 'rpc',
       text: t<string>('Submission'),
+      iconName:'Submission',
       icon: true
     }
   ]);

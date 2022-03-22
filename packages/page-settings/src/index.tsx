@@ -29,17 +29,20 @@ function SettingsApp ({ basePath, onStatusChange }: Props): React.ReactElement<P
       isRoot: true,
       name: 'general',
       text: t<string>('General'),
+      iconName:'General',
       icon: true,
     },
     {
       count: numExtensions,
       name: 'metadata',
       text: t<string>('Metadata'),
+      iconName:'Metadata',
       icon: true,
     },
     {
       name: 'developer',
       text: t<string>('Developer'),
+      iconName:'Developer',
       icon: true,
     },
     // {

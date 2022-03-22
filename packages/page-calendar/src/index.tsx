@@ -33,6 +33,7 @@ function CalendarApp ({ basePath, className }: Props): React.ReactElement<Props>
     isRoot: true,
     name: 'view',
     text: t<string>('Upcoming events'),
+    iconName:'Upcoming events',
     icon: true
   }]);
 

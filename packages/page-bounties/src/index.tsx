@@ -22,7 +22,8 @@ function BountiesApp ({ basePath, className = '' }: Props): React.ReactElement<P
     {
       isRoot: true,
       name: 'index',
-      text: t<string>('Overview')
+      text: t<string>('Overview'),
+      iconName:'Overview'
     }
   ]);
 

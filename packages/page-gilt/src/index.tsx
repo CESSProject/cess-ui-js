@@ -21,7 +21,8 @@ function GiltApp ({ basePath, className }: Props): React.ReactElement<Props> {
     {
       isRoot: true,
       name: 'overview',
-      text: t<string>('Overview')
+      text: t<string>('Overview'),
+      iconName:'Overview'
     }
   ]);
 

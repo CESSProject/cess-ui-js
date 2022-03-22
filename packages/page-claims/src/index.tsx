@@ -92,7 +92,8 @@ function ClaimsApp ({ basePath }: Props): React.ReactElement<Props> {
   const itemsRef = useRef([{
     isRoot: true,
     name: 'create',
-    text: t<string>('Claim tokens')
+    text: t<string>('Claim tokens'),
+    iconName:'Claim tokens'
   }]);
 
   // Everytime we change account, reset everything, and check if the accountId

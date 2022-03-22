@@ -15,11 +15,13 @@ interface Props extends TabItem {
   className?: string;
   count?: number;
   index: number;
-  icon?: boolean
+  icon?: boolean;
+  iconName?:string;
 }
 
-function Tab ({ basePath, className = '', count, hasParams, index, isExact, isRoot, name, text, icon = false }: Props): React.ReactElement<Props> {
+function Tab ({ basePath, className = '', count, hasParams, index, isExact, isRoot, name, text,iconName, icon = false }: Props): React.ReactElement<Props> {
   const [isSelected, setActive] = useState(false);
+  let iconFileName=iconName?iconName:text;
 
   const to = isRoot
     ? basePath
@@ -48,7 +50,7 @@ function Tab ({ basePath, className = '', count, hasParams, index, isExact, isRo
       to={to}
     >
       <div className='tabLinkText'>
-        {icon && <img src={require(`./../../../../assets/icons/${isSelected ? `${text}Active`: text}.png`)} alt={""} className={"tabLinkIcon"}/>}
+        {icon && <img src={require(`./../../../../assets/icons/${isSelected ? `${iconFileName}Active`: iconFileName}.png`)} alt={""} className={"tabLinkIcon"}/>}
         {text}
       </div>
       {!!count && (

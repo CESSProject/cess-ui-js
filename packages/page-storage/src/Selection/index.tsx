@@ -28,16 +28,19 @@ function Selection ({ basePath, onAdd }: Props): React.ReactElement<Props> {
       isRoot: true,
       name: 'modules',
       text: t<string>('Storage'),
+      iconName:'Storage',
       icon: true
     },
     {
       name: 'constants',
       text: t<string>('Constants'),
+      iconName:'Constants',
       icon: true
     },
     {
       name: 'raw',
       text: t<string>('Raw storage'),
+      iconName:'Raw storage',
       icon: true
     }
   ]);
